@@ -33,7 +33,7 @@
   <h1 class="mt-3">Spoiler generator for whatsapp</h1>
   <h2><small class="text-muted">Generate &quot;Read more&quot; button in a WhatsApp message to make spoiler.</small></h2>
 
-  <img src="example.jpg">
+  <img src="example.jpg" width="314" height="87">
   <div class="form-group">
     <label for="tag">Spoiler tag: </label>
     <input type="text" class="form-control" id="tag" value="[SPOILER]" style="width: 100px;">
@@ -41,14 +41,14 @@
 
   <div class="form-group">
     <label for="content">Content: </label>
-    <textarea id="content" class="form-control mb-2" style="height: 100px;"></textarea>
+    <textarea id="content" class="form-control mb-2" style="width: 300px; height: 100px;"></textarea>
     <button class="btn btn-primary" onclick="createSpoilerMessage()">Submit</button>
   </div>
 
 
   <div class="form-group">
     <label for="message">Message (copy this): </label>
-    <textarea id="message" class="form-control mb-2" readonly></textarea>
+    <textarea id="message" class="form-control mb-2" readonly style="width: 300px; height: 100px;"></textarea>
     <button class="btn btn-primary" onclick=copySpoilerMessage()>Copy to clipboard</button>
   </div>
 
