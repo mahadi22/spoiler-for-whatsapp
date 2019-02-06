@@ -4,21 +4,19 @@
   <meta charset=utf-8>
   <title>Spoiler generator for whatsapp</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-  <meta name="description" content="Generate &quot;Read more&quot; button in a WhatsApp message to make spoiler.">
+  <meta name="description" content="Generate &quot;Read more&quot; button in a WhatsApp message to make a spoiler.">
   <meta property="title" content="Spoiler for Whatsapp" />
-  <meta property="description" content="Generate &quot;Read more&quot; button in a WhatsApp message to make spoiler.">
+  <meta property="description" content="Generate &quot;Read more&quot; button in a WhatsApp message to make a spoiler.">
   <link rel="icon" type="image/png" href="wk.ico">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
   <script>
-    function createSpoiler() {
+    function createSpoiler() { <!-- buat spoilernya -->
       var tag = document.getElementById('tag').value;
       var content = document.getElementById('content').value;
       var message = tag + ' ' + '\u200B'.repeat(4000) + content;
       document.getElementById('message').value = message;
     }
-
-    function copySpoilerMessage() {
+    function copySpoiler() {  <!-- salin spoilernya -->
       document.getElementById('message').select();
       document.execCommand('copy');
     }
@@ -28,27 +26,29 @@
 <body>
 <div class="container">
   <h1 class="mt-3">Spoiler generator for whatsapp</h1>
-  <h2><small class="text-success">Generate &quot;Read more&quot; button in a WhatsApp message to make spoiler.</small></h2>
+  <h2><small class="text-success">Generate &quot;Read more&quot; button in a WhatsApp message to make a spoiler.</small></h2>
   <img src="example.jpg" class="img-thumbnail mx-auto d-block" width="314" height="87">
   <div class="warning">
     <p class="text-danger"><strong>&#9888; Use it on your own risk, i'm not responsible for anything that will happen for using this script.</strong></p>
-    <br/><br/>
   </div>
-  
   <div class="form-group">
     <label for="tag">Spoiler tag: </label>
-    <input type="text" class="form-control" id="tag" value="[SPOILER]" style="width: 150px;">
+    <input type="text" class="form-control" id="tag" value="[SPOILER]" style="width: 100px;">
   </div>
   <div class="form-group">
     <label for="content">Content: </label>
-    <textarea id="content" class="form-control mb-2" style="width: 300px; height: 100px;"></textarea>
-    <button class="btn btn-primary" onclick="createSpoiler()">Submit</button>
+    <textarea id="content" class="form-control mb-2" style="height: 100px;"></textarea>
+    <button class="btn btn-primary" onclick="createSpoiler()">Create Spoiler</button>
   </div>
   <div class="form-group">
-    <label for="message">Message (copy this): </label>
-    <textarea id="message" class="form-control mb-2" readonly style="width: 300px; height: 100px;"></textarea>
-    <button class="btn btn-primary" onclick=copySpoilerMessage()>Copy to clipboard</button>
+    <label for="message">Message with spoiler: </label>
+    <textarea id="message" class="form-control mb-2" readonly style="height: 100px;"></textarea>
+    <button class="btn btn-primary" onclick=copySpoiler()>Click to copy</button>
   </div>
+</div>
+<div class="source">
+<p>Source code <a href="#" class="text-success">https://github.com/mahadi22/spoiler-for-whatsapp</a></p>
+<p>v2018.1.33c</p>
 </div>
 </body>
 </html>
